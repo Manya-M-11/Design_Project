@@ -1,0 +1,54 @@
+{
+  "name": "MarketPrice",
+  "type": "object",
+  "properties": {
+    "crop_name": {
+      "type": "string",
+      "description": "Crop name in English"
+    },
+    "crop_name_kannada": {
+      "type": "string",
+      "description": "Crop name in Kannada"
+    },
+    "price_per_quintal": {
+      "type": "number",
+      "description": "Current price per quintal in INR"
+    },
+    "previous_price": {
+      "type": "number",
+      "description": "Previous price for comparison"
+    },
+    "market_name": {
+      "type": "string",
+      "description": "Market/Mandi name"
+    },
+    "trend": {
+      "type": "string",
+      "enum": [
+        "rising",
+        "falling",
+        "stable"
+      ],
+      "description": "Price trend"
+    },
+    "demand": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "very_high"
+      ],
+      "description": "Current demand level"
+    },
+    "date_recorded": {
+      "type": "string",
+      "format": "date"
+    }
+  },
+  "required": [
+    "crop_name",
+    "price_per_quintal",
+    "market_name"
+  ]
+}

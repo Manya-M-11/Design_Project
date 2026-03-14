@@ -1,0 +1,72 @@
+{
+  "name": "SoilAnalysis",
+  "type": "object",
+  "properties": {
+    "farm_id": {
+      "type": "string",
+      "description": "Reference to farm"
+    },
+    "ph_level": {
+      "type": "number",
+      "description": "Soil pH level"
+    },
+    "nitrogen_level": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "description": "Nitrogen content"
+    },
+    "phosphorus_level": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "description": "Phosphorus content"
+    },
+    "potassium_level": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "description": "Potassium content"
+    },
+    "organic_matter": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "description": "Organic matter content"
+    },
+    "moisture_content": {
+      "type": "number",
+      "description": "Moisture percentage"
+    },
+    "recommendations": {
+      "type": "string",
+      "description": "AI recommendations in English"
+    },
+    "recommendations_kannada": {
+      "type": "string",
+      "description": "AI recommendations in Kannada"
+    },
+    "suitable_crops": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Recommended crops for this soil"
+    }
+  },
+  "required": [
+    "farm_id"
+  ]
+}

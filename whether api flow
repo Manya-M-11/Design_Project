@@ -1,0 +1,3 @@
+The geocoding helper now calls https://geocoding-api.open-meteo.com/v1/search?name=…&count=1, 
+so it resolves any user-entered city to lat/lon.
+fetchWeather() now requests https://api.open-meteo.com/v1/forecast?latitude=…&longitude=…&daily=temperature_2m_max,temperature_2m_min&timezone=auto so only the requested daily temps (plus current weather) are fetched.

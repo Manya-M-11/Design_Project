@@ -1,0 +1,61 @@
+{
+  "name": "Farm",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Farm name"
+    },
+    "location": {
+      "type": "string",
+      "description": "Farm location/village"
+    },
+    "district": {
+      "type": "string",
+      "description": "District name"
+    },
+    "size_acres": {
+      "type": "number",
+      "description": "Farm size in acres"
+    },
+    "soil_type": {
+      "type": "string",
+      "enum": [
+        "black_soil",
+        "red_soil",
+        "alluvial",
+        "laterite",
+        "sandy",
+        "clay"
+      ],
+      "description": "Type of soil"
+    },
+    "crops": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Currently growing crops"
+    },
+    "phone_number": {
+      "type": "string",
+      "description": "Farmer's phone number for SMS alerts"
+    },
+    "sms_alerts_enabled": {
+      "type": "boolean",
+      "default": true
+    },
+    "preferred_language": {
+      "type": "string",
+      "enum": [
+        "en",
+        "kn"
+      ],
+      "default": "en"
+    }
+  },
+  "required": [
+    "name",
+    "location"
+  ]
+}

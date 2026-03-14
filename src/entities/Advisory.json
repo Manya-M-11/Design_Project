@@ -1,0 +1,71 @@
+{
+  "name": "Advisory",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Advisory title in English"
+    },
+    "title_kannada": {
+      "type": "string",
+      "description": "Advisory title in Kannada"
+    },
+    "content": {
+      "type": "string",
+      "description": "Advisory content in English"
+    },
+    "content_kannada": {
+      "type": "string",
+      "description": "Advisory content in Kannada"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "weather",
+        "pest",
+        "market",
+        "soil",
+        "general",
+        "urgent"
+      ],
+      "description": "Advisory category"
+    },
+    "priority": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "urgent"
+      ],
+      "default": "medium"
+    },
+    "target_crops": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Relevant crops"
+    },
+    "target_districts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Target districts"
+    },
+    "sms_sent": {
+      "type": "boolean",
+      "default": false
+    },
+    "valid_until": {
+      "type": "string",
+      "format": "date"
+    }
+  },
+  "required": [
+    "title",
+    "content",
+    "category"
+  ]
+}
